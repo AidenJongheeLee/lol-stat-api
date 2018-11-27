@@ -4,7 +4,11 @@ const routes = require('./routes');
 
 const app = express();
 
-app.use(cors());
+app.configure(() => {
+  app.use(cors());
+});
+
+
 routes(app);
 
 const port = process.env.PORT || 4000;
