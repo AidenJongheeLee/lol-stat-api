@@ -18,7 +18,11 @@ const allowCrossDomain = (req, res, next) => {
 };
 
 app.configure(() => {
-  app.use(allowCrossDomain);
+  app.use(cors());
+});
+
+app.use('/', (req, res) => {
+  res.json('this is lol stat api');
 });
 
 
