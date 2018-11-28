@@ -1,7 +1,7 @@
 const axios = require('axios');
-const secretKey = require('../secret.js');
+const config = require('../config');
 
-const headers = { 'X-Riot-Token': secretKey };
+const headers = { 'X-Riot-Token': config.SECRET_KEY };
 
 module.exports.get = async (url) => {
   try {
